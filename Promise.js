@@ -2,7 +2,7 @@ const promisetest = (numberValue)=> new Promise((resolve, reject)=>{
   if(Number.isInteger(numberValue)===true){
     resolve(numberValue)
   }else{
-    throw new Error('이 함수는 정수가 필요합니다.')
+    reject(new Error('이 함수는 정수가 필요합니다.'))
   }
 }).then((data)=>{
   console.log(data)
@@ -16,8 +16,10 @@ const promisetest = (numberValue)=> new Promise((resolve, reject)=>{
 }).then((data)=>{
   console.log(data)
   return data+4
+}).catch((error)=>{
+  console.error(error)
 })
 
 
-console.log(promisetest(10))
-// promisetest("rk")
+// console.log(promisetest(10))
+console.log(promisetest("rk"))
