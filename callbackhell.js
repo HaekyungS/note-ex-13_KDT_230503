@@ -1,13 +1,13 @@
 function exampleOne(data){
   if(Number.isInteger(data)===true){
-    return (data)=>{
-      data+=1
-      return (data)=>{
-        data+=2
-        return (data)=>{
-          data+=3
-          return (data)=>{
-            data+=4
+    (data)=>{
+      data+=1;
+      (data)=>{
+        data+=2;
+        (data)=>{
+          data+=3;
+          (data)=>{
+            data+=4;
             return data
           }
         }
