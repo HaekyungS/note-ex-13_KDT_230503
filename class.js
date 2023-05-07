@@ -1,6 +1,9 @@
 class ExampleOne {
   constructor(number, j) {
     this.numberValue = number;
+    for (let i = 0; i < 4; i++) {
+      this['innerFunc' + i] = new Function('x', `return x+${i+1}`)
+    }
   }
 
   set numberValue(value) {
@@ -11,28 +14,27 @@ class ExampleOne {
     }
   }
 
+
   get() {
-    return this.first(this.second(this.third(this.fourth(this._numberValue))))
+    return this.innerFunc0(this.innerFunc1(this.innerFunc2(this.innerFunc3(this._numberValue))))
   }
 
-  first(x){
-    return x+1
-  }
+  // first(x){
+  //   return x+1
+  // }
 
-  second(x){
-    return x+2
-  }
+  // second(x){
+  //   return x+2
+  // }
 
-  third(x){
-    return x+3
-  }
+  // third(x){
+  //   return x+3
+  // }
 
-  fourth(x){
-    return x+4
-  }
+  // fourth(x){
+  //   return x+4
+  // }
 
 }
-
-
 
 console.log(new ExampleOne(10).get())
