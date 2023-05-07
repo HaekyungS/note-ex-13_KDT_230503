@@ -6,7 +6,10 @@ const promisetest = (numberValue)=> new Promise((resolve, reject)=>{
   }
 }).then((data)=>{
   // console.log(data)
-  return data
+  return data+1
+}).then((data)=>{
+  // console.log(data)
+  return data+2
 })
 
 
