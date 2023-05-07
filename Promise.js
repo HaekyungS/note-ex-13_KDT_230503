@@ -5,6 +5,7 @@ const promisetest = (numberValue)=> new Promise((resolve, reject)=>{
     throw new Error('이 함수는 정수가 필요합니다.')
   }
 }).then((data)=>{
+  // console.log(data)
   return data
 })
 
