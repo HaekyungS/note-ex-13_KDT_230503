@@ -5,13 +5,19 @@ const promisetest = (numberValue)=> new Promise((resolve, reject)=>{
     throw new Error('이 함수는 정수가 필요합니다.')
   }
 }).then((data)=>{
-  // console.log(data)
+  console.log(data)
   return data+1
 }).then((data)=>{
-  // console.log(data)
+  console.log(data)
   return data+2
+}).then((data)=>{
+  console.log(data)
+  return data+3
+}).then((data)=>{
+  console.log(data)
+  return data+4
 })
 
 
-promisetest(22)
+console.log(promisetest(10))
 // promisetest("rk")
